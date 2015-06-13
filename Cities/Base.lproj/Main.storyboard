@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Cites" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sga-7Q-V9r">
+                                <rect key="frame" x="279" y="164" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOE-kV-Dtz">
+                                <rect key="frame" x="265" y="285" width="68" height="30"/>
+                                <state key="normal" title="Warschau">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NBY-jI-2eE" kind="modal" identifier="showCityDetail" id="CIy-qM-RtC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Sga-7Q-V9r" secondAttribute="centerX" id="5Fe-fI-yib"/>
+                            <constraint firstAttribute="centerY" secondItem="pOE-kV-Dtz" secondAttribute="centerY" id="CcZ-hr-b3j"/>
+                            <constraint firstAttribute="centerX" secondItem="pOE-kV-Dtz" secondAttribute="centerX" id="RPy-iK-AeF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="375.75"/>
+        </scene>
+        <!--City Detail View Controller-->
+        <scene sceneID="ZDZ-ib-pjs">
+            <objects>
+                <viewController id="NBY-jI-2eE" customClass="CityDetailViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r2A-ew-kKh"/>
+                        <viewControllerLayoutGuide type="bottom" id="doU-TX-mLT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sgw-Uj-bZS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvu-ds-K4w">
+                                <rect key="frame" x="279" y="83" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-3b-s2p">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dLE-fM-x3a"/>
+                                </constraints>
+                                <state key="normal" title="Zurück">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dLE-fM-x3a"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="276" y="184" width="48" height="30"/>
+                                    <mask key="constraints">
+                                        <include reference="dLE-fM-x3a"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zw7-ZV-34r">
+                                <rect key="frame" x="36" y="105" width="529" height="475"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="35" y="310" width="530" height="463"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bYq-3b-s2p" firstAttribute="top" secondItem="Tvu-ds-K4w" secondAttribute="bottom" constant="70" id="IjM-U2-tr7"/>
+                            <constraint firstAttribute="centerX" secondItem="Tvu-ds-K4w" secondAttribute="centerX" id="L9C-D9-2XW"/>
+                            <constraint firstAttribute="centerY" secondItem="Tvu-ds-K4w" secondAttribute="centerY" constant="100" id="orv-Wc-zi9"/>
+                            <constraint firstAttribute="centerX" secondItem="bYq-3b-s2p" secondAttribute="centerX" id="sBA-1w-oIx"/>
+                            <constraint firstAttribute="centerX" secondItem="Tvu-ds-K4w" secondAttribute="centerX" id="yfA-8z-hg8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="bYq-3b-s2p"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="L9C-D9-2XW"/>
+                                <exclude reference="orv-Wc-zi9"/>
+                                <exclude reference="IjM-U2-tr7"/>
+                                <exclude reference="sBA-1w-oIx"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="bYq-3b-s2p"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="L9C-D9-2XW"/>
+                                <include reference="orv-Wc-zi9"/>
+                                <include reference="IjM-U2-tr7"/>
+                                <include reference="sBA-1w-oIx"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zw7-ZV-34r" id="BEP-QA-goh"/>
+                        <outlet property="nameLabel" destination="Tvu-ds-K4w" id="pm2-o8-0Uy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBc-Sq-Te2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="318"/>
+        </scene>
+    </scenes>
+</document>
